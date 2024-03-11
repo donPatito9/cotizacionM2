@@ -1,0 +1,57 @@
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"content="IE-edge">
+  <meta name="viewport"content="width-device-width, initial-scale="1.0">
+  <title>Evaluación 2 Diseño Front End</title>
+<link rel="stylesheet" href="estilo.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container d-flex">
+    <div class="col ">
+      <div class="row">
+      <div class="col align-self-start">
+        <div class="col-sm-12 col-sm-10 derecha">
+          <div class="form-group row">
+           <form name="form1" class="formulario" action="" method="post">
+             <h2>Formulario de Cotización</h2><br>
+             <h4>Ingrese los datos para cotizar</h4>
+             <label for="inputNombres" class="col-sm-10 col-form-label">Nombres</label>
+             <input type="text" id="nombre" name="nombre" placeholder="Nombres(*)" required="" size="65"onblur="validarNombres()"><br>
+             <label for="inputApellidos" class="col-sm-10 col-form-label">Apellidos</label>
+             <input type="text" id="imputApellidos" name="apellidos" placeholder="Apellidos (*)" required="" size="65"onblur="validarApellidos()"><br>
+             <label for="inputDireccion" class="col-sm-10 col-form-label">Dirección</label>
+             <input type="text" name="direccion" placeholder="Dirección(*)" required="" size="65"onblur="validarDireccion()"><br>
+             <label for="inputEmail" class="col-sm-10 col-form-label">Email</label>
+             <input type="email" id="imputEmail" name="nombre" placeholder="Email(*)"required=""  size="65"onblur="validarEmail()"><br>
+             </div><br>
+             <div class="row g-3 needs-validation">
+             <div class="col-sm-5 position-relative">
+             <label for="primerNumero" class="form-label">Ancho del piso</label>
+             <input type="text" class="form-control" id="primerNumero" placeholder="Ingrese metros de Ancho" required="" onblur="validarAncho()">
+             </div>
+             <div class="col-sm-5 position-relative">
+             <label for="segundoNumero" class="form-label">Largo del piso</label>
+             <input type="text" class="form-control" id="segundoNumero" placeholder="Ingrese metros de Largo" required=""onblur="validarLargo()">
+           </div><br><br>
+           <imput class="btn btn-primary btn-block col-sm-10" class="boton" value="Cotizar" onclick="multiplicar()">Cotizar</imput>
+           </div>
+        </form>
+      </div></div>
+      <div class="col align-self-start"><div class="ventana"><p>Metros2:<br>
+      <span id="resultado"></span>
+      </p><p>Total del Trabajo:<br>
+      <span id="total"></span>
+      </p></div>
+    </div>
+  </div>
+  </div>     
+</div>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="Script.js"></script>
+</body>
+</html>
